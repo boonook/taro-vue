@@ -25,6 +25,18 @@
         </view>
       </view>
     </picker>
+    <view class='example-item'>
+      <picker
+        mode='date'
+        :value="dateSel"
+        @change="handleDateChange"
+      >
+        <view class='demo-list-item'>
+          <view class='demo-list-item__label'>请选择日期</view>
+          <view class='demo-list-item__value'>{{ dateSel }}</view>
+        </view>
+      </picker>
+    </view>
     <AtActionSheet
       cancelText='取消'
       :isOpened="isOpened"
@@ -52,18 +64,19 @@
 </template>
 
 <script>
-import { AtButton,AtActionSheet,AtActionSheetItem,AtNavBar,picker } from 'taro-ui-vue';
+import { AtButton,AtActionSheet,AtActionSheetItem,AtNavBar } from 'taro-ui-vue';
 import Taro from '@tarojs/taro';
 export default {
   name: "taroui",
   components: {
-      AtButton,AtActionSheet,AtActionSheetItem,AtNavBar,picker
+      AtButton,AtActionSheet,AtActionSheetItem,AtNavBar
   },
   data() {
     return {
       isOpened:false,
       selector: ['中国', '美国', '巴西', '日本'],
       selectorValue: 0,
+      dateSel: '2018-06-18',
     };
   },
   computed: {},
@@ -77,6 +90,9 @@ export default {
         Taro.hideLoading();
       },2000);
       this.isOpened = true;
+    },
+    handleDateChange (e) {
+      this.dateSel = e.detail.value
     },
     handleCancel(){
       this.isOpened = false;
