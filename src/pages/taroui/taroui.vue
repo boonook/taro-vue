@@ -1,7 +1,30 @@
 <!--  -->
 <template>
   <view>
+    <AtNavBar
+      :onClickRgIconSt="handleClick"
+      :onClickRgIconNd="handleClick"
+      :onClickLeftIcon="handleClick"
+      color='#000'
+      title='NavBar 导航栏示例'
+      leftText='返回'
+      leftIconType="chevron-left"
+      rightFirstIconType='bullet-list'
+      rightSecondIconType='user'
+    />
     <AtButton type='primary' :onClick="handleClick">按钮文案</AtButton>
+    <picker
+      mode='selector'
+      :range="selector"
+      :value="selectorValue"
+    >
+      <view class='demo-list-item'>
+        <view class='demo-list-item__label'>国家地区</view>
+        <view class='demo-list-item__value'>
+          {{ selector[selectorValue] }}
+        </view>
+      </view>
+    </picker>
     <AtActionSheet
       cancelText='取消'
       :isOpened="isOpened"
@@ -29,20 +52,30 @@
 </template>
 
 <script>
-import { AtButton,AtActionSheet,AtActionSheetItem } from 'taro-ui-vue'
+import { AtButton,AtActionSheet,AtActionSheetItem,AtNavBar,picker } from 'taro-ui-vue';
+import Taro from '@tarojs/taro';
 export default {
   name: "taroui",
   components: {
-      AtButton,AtActionSheet,AtActionSheetItem
+      AtButton,AtActionSheet,AtActionSheetItem,AtNavBar,picker
   },
   data() {
     return {
-      isOpened:false
+      isOpened:false,
+      selector: ['中国', '美国', '巴西', '日本'],
+      selectorValue: 0,
     };
   },
   computed: {},
   methods: {
     handleClick () {
+      Taro.showLoading({
+        title: '加载中',
+        icon: 'loading'
+      });
+      setTimeout(()=>{
+        Taro.hideLoading();
+      },2000);
       this.isOpened = true;
     },
     handleCancel(){
@@ -52,11 +85,12 @@ export default {
       this.isOpened = false;
     },
     clickBtn(data){
-      debugger
       console.log(data);
     }
   },
   onShow() {
+    ////Taro-跨端环境判断
+    console.log(process.env.TARO_ENV);
     console.log(this.$store.state.auth);
   },
 };

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51da2a3b-3696-448d-ba69-7207355456d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/taroui/taroui.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/taroui/taroui.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,11 +18,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/taroui/taroui.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+            <state relative-caret-position="267">
+              <caret line="89" column="4" lean-forward="true" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
               <folding>
-                <element signature="e#221#241#0" />
-                <element signature="e#253#273#0" />
+                <element signature="n#AtActionSheet#0;n#view#0;n#template#0;n#!!top" />
+                <element signature="e#678#749#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,11 +72,11 @@
     <bower-package value="" />
     <bower.json value="" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="835" />
-    <option name="y" value="181" />
-    <option name="width" value="1575" />
-    <option name="height" value="1202" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="93" />
+    <option name="y" value="36" />
+    <option name="width" value="1668" />
+    <option name="height" value="1401" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -165,7 +164,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614137548664</updated>
-      <workItem from="1614137549854" duration="6477000" />
+      <workItem from="1614137549854" duration="8599000" />
     </task>
     <task id="LOCAL-00001" summary="初始化从无到有">
       <created>1614146762513</created>
@@ -188,24 +187,31 @@
       <option name="project" value="LOCAL" />
       <updated>1614148576648</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="函数传递参数">
+      <created>1614149990465</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1614149990465</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6477000" />
+    <option name="totallyTimeSpent" value="8599000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="93" y="36" width="1668" height="1401" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13829787" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21533743" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="GraphQL" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.2324493" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.4269929" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -224,7 +230,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初始化从无到有" />
-    <option name="LAST_COMMIT_MESSAGE" value="初始化从无到有" />
+    <MESSAGE value="函数传递参数" />
+    <option name="LAST_COMMIT_MESSAGE" value="函数传递参数" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/jsconfig.json">
@@ -348,11 +355,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/taroui/taroui.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        <state relative-caret-position="267">
+          <caret line="89" column="4" lean-forward="true" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
           <folding>
-            <element signature="e#221#241#0" />
-            <element signature="e#253#273#0" />
+            <element signature="n#AtActionSheet#0;n#view#0;n#template#0;n#!!top" />
+            <element signature="e#678#749#0" expanded="true" />
           </folding>
         </state>
       </provider>
