@@ -1,7 +1,7 @@
 <!--  -->
 <template>
   <view>
-    <AtButton type='primary'>按钮文案</AtButton>
+    <AtButton type='primary' :onClick="handleClick">按钮文案</AtButton>
   </view>
 </template>
 
@@ -22,7 +22,11 @@ export default {
 
   computed: {},
 
-  methods: {},
+  methods: {
+    handleClick () {
+      console.log('click button')
+    }
+  },
   onShow() {
     console.log(this.$store.state.auth);
   },
