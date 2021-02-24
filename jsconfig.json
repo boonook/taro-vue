@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/src/*": ["./src/*"],
+        "@/package": ["./package.json"],
+        "@/project": ["./project.config.json"]
+      }
+    }
+  }
