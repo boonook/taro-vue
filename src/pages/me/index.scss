@@ -1,0 +1,14 @@
+.header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  .header-left{
+    flex:1;
+  }
+  .header-right{
+    width:200px;
+    height:200px;
+    overflow: hidden;
+  }
+}

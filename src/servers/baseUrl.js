@@ -12,7 +12,7 @@ const getBaseUrl = url => {
   } else {
     // 生产环境
     if (url.includes("/api/")) {
-      BASE_URL = "";
+      BASE_URL = "https://v2.alapi.cn";
     } else if (url.includes("/iatadatabase/")) {
       BASE_URL = "";
     }

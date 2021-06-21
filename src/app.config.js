@@ -1,7 +1,9 @@
 export default {
   pages: [
     'pages/index/index',
-    'pages/taroui/taroui'
+    'pages/mv/index',
+    'pages/shortvideo/index',
+    'pages/me/index',
   ],
   window: {
     backgroundTextStyle: 'light',
@@ -16,14 +18,42 @@ export default {
     borderStyle: 'black',
     list: [{
       pagePath: "pages/index/index",
-      text: "首页",
-      iconPath: "./assest/tab-bar/home.png",
-      selectedIconPath: "./assest/tab-bar/home-active.png",
+      text: "辣图",
+      iconPath: "./assest/tab-bar/image.png",
+      selectedIconPath: "./assest/tab-bar/image-active.png",
     },{
-      pagePath: "pages/taroui/taroui",
-      iconPath: "./assest/tab-bar/user.png",
-      selectedIconPath: "./assest/tab-bar/user-active.png",
+      pagePath: "pages/mv/index",
+      iconPath: "./assest/tab-bar/mv.png",
+      selectedIconPath: "./assest/tab-bar/mv-active.png",
+      text: "mv"
+    },{
+      pagePath: "pages/shortvideo/index",
+      iconPath: "./assest/tab-bar/shiping.png",
+      selectedIconPath: "./assest/tab-bar/shiping-active.png",
+      text: "短视频"
+    },{
+      pagePath: "pages/me/index",
+      iconPath: "./assest/tab-bar/wode.png",
+      selectedIconPath: "./assest/tab-bar/wode-active.png",
       text: "我的"
     }]
   },
+  "subPackages": [
+    {
+      "root": "pages/imagepage/",
+      "pages": [
+        'pages/hanfu/index',
+        'pages/jk/index',
+        'pages/luoli/index',
+        'pages/nvpu/index',
+        'pages/yujie/index',
+      ]
+    },
+    {
+      "root": "pages/mvpage/",
+      "pages": [
+        'pages/jiqing/index',
+      ]
+    }
+  ]
 }
