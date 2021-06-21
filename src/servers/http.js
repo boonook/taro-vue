@@ -15,8 +15,8 @@ function hideLoading() {
 }
 
 class httpRequest {
-  baseOptions(params, method = "GET") {
-    let { url, data } = params;
+  baseOptions(params) {
+    let { url, data={},method='GET' } = params;
     const BASE_URL = getBaseUrl(url);
     let contentType = "application/json";
     contentType = params.contentType || contentType;
@@ -30,8 +30,8 @@ class httpRequest {
       },
       mode: "cors" //允许跨域,需要java服务端允许
     };
-    return Taro.request(option)
-      .then(res => {
+    debugger
+    return Taro.request(option).then(res => {
         hideLoading();
         //解析数据
         const errMsg = res.errMsg;
@@ -39,43 +39,10 @@ class httpRequest {
           return Promise.resolve(res.data);
         }
         return Promise.reject(errMsg);
-      })
-      .catch(err => {
+      }).catch(err => {
         hideLoading();
         return Promise.reject(err);
       });
-  }
-
-  get({url, data = "",loading=true}) {
-    let option = { url, data };
-    if(loading){
-      showLoading();
-    }
-    return this.baseOptions(option);
-  }
-
-  post({url, data, contentType,loading = true}) {
-    if(loading){
-      showLoading();
-    }
-    let params = { url, data, contentType };
-    return this.baseOptions(params, "POST");
-  }
-
-  put({url, data = "",loading = true}) {
-    if(loading){
-      showLoading();
-    }
-    let option = { url, data };
-    return this.baseOptions(option, "PUT");
-  }
-
-  delete({url, data = "",loading = true}) {
-    if(loading){
-      showLoading();
-    }
-    let option = { url, data };
-    return this.baseOptions(option, "DELETE");
   }
 }
 

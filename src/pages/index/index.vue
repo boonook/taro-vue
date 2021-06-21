@@ -153,8 +153,7 @@ export default {
     ]),
     getData() {
       let that = this;
-      getWxarticleChaptersJson()
-        .then(res => {
+      getWxarticleChaptersJson({keyword:'123'}).then(res => {
           that.msg = res;
           console.log(res);
         })

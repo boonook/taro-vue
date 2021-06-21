@@ -1,9 +1,9 @@
 const getBaseUrl = url => {
-  let BASE_URL = "http://www.wanandroid.com";
+  let BASE_URL = "https://v2.alapi.cn";
   if (process.env.NODE_ENV === "development") {
     //开发环境 - 根据请求不同返回不同的BASE_URL
     if (url.includes("/api/")) {
-      BASE_URL = "";
+      BASE_URL = "https://v2.alapi.cn";
     } else if (url.includes("/iatadatabase/")) {
       BASE_URL = "";
     }
