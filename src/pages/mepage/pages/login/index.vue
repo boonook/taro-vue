@@ -83,7 +83,7 @@ export default {
       'handle',
     ]),
     onLogin() {
-     Taro.redirectTo({
+     Taro.switchTab({
         url: "/pages/home/index",
       })
     },

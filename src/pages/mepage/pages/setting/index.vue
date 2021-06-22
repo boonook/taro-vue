@@ -83,7 +83,7 @@ export default {
       'handle',
     ]),
     onLoginOut() {
-      Taro.redirectTo({
+      Taro.reLaunch({
         url: "/pages/mepage/pages/login/index",
       })
     },

@@ -170,7 +170,7 @@ export default {
 
     toTaroUI() {
       //redirectTo
-      Taro.redirectTo({
+      Taro.switchTab({
         url: "/pages/home/index?id=1",
       })
     }
