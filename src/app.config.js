@@ -1,6 +1,7 @@
 export default {
   pages: [
     'pages/index/index',
+    'pages/home/index',
     'pages/mv/index',
     'pages/shortvideo/index',
     'pages/me/index',
@@ -17,7 +18,7 @@ export default {
     backgroundColor: "#fafafa",
     borderStyle: 'black',
     list: [{
-      pagePath: "pages/index/index",
+      pagePath: "pages/home/index",
       text: "辣图",
       iconPath: "./assest/tab-bar/image.png",
       selectedIconPath: "./assest/tab-bar/image-active.png",
@@ -53,6 +54,14 @@ export default {
       "root": "pages/mvpage/",
       "pages": [
         'pages/jiqing/index',
+      ]
+    },
+    {
+      "root": "pages/mepage/",
+      "pages": [
+        'pages/login/index',
+        'pages/setting/index',
+        'pages/forgetpwd/index',
       ]
     }
   ]

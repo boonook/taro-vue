@@ -1,49 +1,6 @@
 <template>
   <view class="index">
-    <view class="header">
-      <view class="header-left">
-        <text>大地瓜</text>
-        <view>
-          <text>未知</text>
-        </view>
-        <view>
-          <view>
-            <text>0</text>
-          </view>
-          <view>
-            <text>作品数量</text>
-          </view>
-        </view>
-      </view>
-      <view class="header-right">
-        <img src="@/src/assest/images/girl.jpg" style="width:100%" alt="">
-      </view>  
-    </view>
-    <view>
-      <text>
-        上传美照
-      </text>
-    </view>
-    <view>
-      <text>
-        上传短视频
-      </text>
-    </view>
-    <view>
-      <text>
-        上传mv
-      </text>
-    </view>
-    <view>
-      <text>
-        查看我的作品
-      </text>
-    </view>
-    <view>
-      <button type="primary" @tap="getData()">
-        设置
-      </button>
-    </view>
+    <text>忘记密码</text>  
   </view>
 </template>
 
@@ -124,9 +81,7 @@ export default {
       'handle',
     ]),
     getData() {
-      Taro.navigateTo({
-        url: "/pages/mepage/pages/setting/index",
-      })
+     
     },
 
     toTaroStore(){

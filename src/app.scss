@@ -6,7 +6,9 @@ taro-button-core[plain][type=primary]{
     color: #6190E8!important;
     border: 1px solid #6190E8!important;
 }
-
-taro-button-core[type=primary] {
-    background-color: #6190E8!important;
+#container{
+    taro-button-core[type=primary] {
+        color: #ffffff!important;
+        background-color: #6190E8!important;
+    }
 }
