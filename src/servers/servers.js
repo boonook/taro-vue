@@ -1,11 +1,9 @@
-import HTTPREQUEST from "./http";
+import HTTPREQUEST from "@/src/servers/http";
 
 export const getWxarticleChaptersJson = (getData) => {
-  return HTTPREQUEST.baseOptions(
-    {
-      url:'/api/music/search',
-      data:getData,
-      method:'GET'
-    }
-  )
+  return HTTPREQUEST.baseOptions({
+    url:'/api/music/search',
+    data:getData,
+    method:'GET'
+  })
 }
