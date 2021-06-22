@@ -39,7 +39,8 @@
     "@tarojs/components": "3.0.26",
     "@tarojs/runtime": "3.0.26",
     "@tarojs/taro": "3.0.26",
-    "taro-ui-vue3": "^1.0.0-alpha.21",
+    "moment": "^2.29.1",
+    "taro-ui-vue": "^1.0.0-beta.10",
     "vue": "^2.5.0",
     "vue-template-compiler": "^2.5.0",
     "vuex": "^3.6.2"

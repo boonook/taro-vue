@@ -1,4 +1,4 @@
-@import "~taro-ui-vue3/dist/style/index.scss"; // 引入组件样式，仅需引入一次即可
+@import "~taro-ui-vue/dist/style/index.scss"; // 引入组件样式，仅需引入一次即可
 taro-text-core{
     white-space: unset!important;
 }
@@ -11,4 +11,7 @@ taro-button-core[plain][type=primary]{
         color: #ffffff!important;
         background-color: #6190E8!important;
     }
+}
+.danger{
+    color: #FF4949;
 }

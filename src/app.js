@@ -1,7 +1,6 @@
-import Vue from 'vue'
-import './app.scss'
-import store from './store'
-
+import Vue from 'vue';
+import './app.scss';
+import store from './store';
 const App = new Vue({
   store,
   onShow (options) {
@@ -11,7 +10,6 @@ const App = new Vue({
     return h('block', this.$slots.default)
   }
 })
-
 
 export default App
 

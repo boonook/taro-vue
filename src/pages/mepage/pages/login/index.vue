@@ -3,18 +3,36 @@
     <button type="primary" @tap="onLogin()">
       登录
     </button>
+    <AtActionSheet
+      cancelText='取消'
+      title='清除位置信息后， 别人将不能查看到你'
+      :isOpened="isOpened"
+      :on-close="handleClose"
+      onCancel="handleOnCancel"
+    >
+      <AtActionSheetItem
+        class='danger'
+        :on-click="handleOk"
+      >
+        <text class='danger'>
+          确定
+        </text>
+      </AtActionSheetItem>
+    </AtActionSheet>
   </view>
 </template>
-
 <script>
 import "./index.scss";
 import Taro from "@tarojs/taro";
-import {mapActions} from 'vuex'
-
+import {mapActions} from 'vuex';
+import { AtActionSheet, AtActionSheetItem } from 'taro-ui-vue'
 export default {
+  components:{
+   AtActionSheet,AtActionSheetItem
+  },
   data() {
     return {
-      
+      isOpened:false
     };
   },
 
@@ -83,16 +101,21 @@ export default {
       'handle',
     ]),
     onLogin() {
-     Taro.switchTab({
+      this.isOpened = true;
+    },
+
+    handleOk(){
+      Taro.switchTab({
         url: "/pages/home/index",
       })
     },
 
-    toTaroStore(){
-      this.handle(true).then(res=>{
-        debugger
-      })
+    handleClose(){
+      this.isOpened = false;
     },
+    handleOnCancel(){
+      this.isOpened = false;
+    }
   }
 };
 </script>
